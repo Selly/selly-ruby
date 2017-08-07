@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Selly"]
   spec.email         = ["contact@selly.gg"]
 
-  spec.summary       = "Yes"
-  spec.description   = "Test"
+  spec.summary       = "Ruby library for Selly's API"
+  spec.description   = "Ruby library for Selly's API"
   spec.homepage      = "https://selly.gg"
   spec.license       = "MIT"
 
