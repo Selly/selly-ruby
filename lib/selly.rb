@@ -7,6 +7,7 @@ require 'selly/exchange_rates'
 require 'selly/orders'
 require 'selly/products'
 require 'selly/statistics'
+require 'base64'
 
 module Selly
   API_ROOT = 'https://selly.gg/api'.freeze
@@ -22,8 +23,7 @@ module Selly
         'User-Agent': USER_AGENT,
         'Accept': JSON_MIME,
         'Content-Type': JSON_MIME,
-        'X-Auth-Email': @api_email,
-        'X-Auth-Key': @api_key
+        'Authorization': 'Basic ' + Base64.encode64("#{@api_email}:#{@api_key}")
       }
     end
   end
