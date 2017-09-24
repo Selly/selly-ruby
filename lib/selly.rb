@@ -1,11 +1,14 @@
 require 'selly/version'
+require 'selly/operations/create'
 require 'selly/operations/list'
 require 'selly/operations/show'
 require 'selly/resource'
 require 'selly/blacklist'
 require 'selly/exchange_rates'
 require 'selly/orders'
+require 'selly/pay'
 require 'selly/products'
+require 'selly/product_groups'
 require 'selly/statistics'
 require 'base64'
 
@@ -20,10 +23,9 @@ module Selly
 
     def request_headers
       {
-        'User-Agent': USER_AGENT,
-        'Accept': JSON_MIME,
-        'Content-Type': JSON_MIME,
-        'Authorization': 'Basic ' + Base64.encode64("#{@api_email}:#{@api_key}")
+        'User-Agent': USER_AGENT.strip,
+        'Accept': JSON_MIME.strip,
+        'Authorization': 'Basic ' + Base64.encode64("#{@api_email}:#{@api_key}").delete!("\n")
       }
     end
   end
