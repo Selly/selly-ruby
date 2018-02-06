@@ -2,9 +2,9 @@ require 'http'
 
 module Selly
   module Operations
-    module Show
-      def show(resource_id, options = {})
-        response = HTTP.get("#{API_ROOT}#{resource_url}/#{resource_id}", headers: Selly.request_headers, params: options)
+    module Update
+      def update(resource_id, params = {})
+        response = HTTP.put("#{API_ROOT}#{resource_url}/#{resource_id}", headers: Selly.request_headers, json: params)
 
         parsed = response.parse
         if parsed.class == Hash && (response.code < 200 || response.code > 300)
