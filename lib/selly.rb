@@ -1,7 +1,9 @@
 require 'selly/version'
+require 'selly/selly_error'
 require 'selly/operations/create'
 require 'selly/operations/list'
 require 'selly/operations/show'
+require 'selly/operations/update'
 require 'selly/resource'
 require 'selly/blacklist'
 require 'selly/exchange_rates'
@@ -13,7 +15,7 @@ require 'selly/statistics'
 require 'base64'
 
 module Selly
-  API_ROOT = 'https://selly.gg/api'.freeze
+  API_ROOT = 'https://selly.gg/api/v2'.freeze
   USER_AGENT = "[Selly Ruby v#{VERSION}] Ruby-#{RUBY_VERSION} - #{RUBY_PLATFORM}".freeze
   JSON_MIME = 'application/json'.freeze
 
