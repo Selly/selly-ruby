@@ -11,7 +11,6 @@ require 'selly/orders'
 require 'selly/pay'
 require 'selly/products'
 require 'selly/product_groups'
-require 'selly/statistics'
 require 'base64'
 
 module Selly
