@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "selly"
   spec.version       = Selly::VERSION
   spec.authors       = ["Selly"]
-  spec.email         = ["contact@selly.gg"]
+  spec.email         = ["contact@selly.io"]
 
   spec.summary       = "Ruby library for Selly's API"
   spec.description   = "Ruby library for Selly's API"
-  spec.homepage      = "https://selly.gg"
+  spec.homepage      = "https://selly.io"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split("\n")

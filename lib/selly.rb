@@ -14,7 +14,7 @@ require 'selly/product_groups'
 require 'base64'
 
 module Selly
-  API_ROOT = 'https://selly.gg/api/v2'.freeze
+  API_ROOT = 'https://selly.io/api/v2'.freeze
   USER_AGENT = "[Selly Ruby v#{VERSION}] Ruby-#{RUBY_VERSION} - #{RUBY_PLATFORM}".freeze
   JSON_MIME = 'application/json'.freeze
 
