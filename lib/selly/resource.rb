@@ -3,11 +3,11 @@ require 'cgi'
 module Selly
   class Resource
     def self.class_name
-      self.name.split('::')[-1]
+      self.name.split('::')[1 .. -1].join('::')
     end
 
     def self.resource_url
-      "/#{CGI.escape(to_snake_case(class_name))}"
+      "/#{CGI.unescape(to_snake_case(class_name))}"
     end
 
     def self.to_snake_case(string)
