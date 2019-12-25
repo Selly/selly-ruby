@@ -15,7 +15,7 @@ require 'selly/webhooks/endpoints'
 require 'base64'
 
 module Selly
-  API_ROOT = 'http://selly.lab/api/v2'.freeze
+  API_ROOT = 'https://selly.io/api/v2'.freeze
   USER_AGENT = "[Selly Ruby v#{VERSION}] Ruby-#{RUBY_VERSION} - #{RUBY_PLATFORM}".freeze
   JSON_MIME = 'application/json'.freeze
 
